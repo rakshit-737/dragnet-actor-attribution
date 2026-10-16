@@ -96,7 +96,7 @@ jobs:
         run: |
           python -m dragnet export-cypher --case dragnet/data/cases/wannacry_like.json -o /tmp/kg.cypher
           python scripts/check_neo4j.py /tmp/kg.cypher | tee neo4j.log
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: neo4j-log
